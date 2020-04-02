@@ -12,5 +12,13 @@ export class AppComponent {
   lng: number = 9.190766;
   lati:number=45.5048616;
   lngi:number=9.1850903;
+  icon =  {
+    url:'./assets/img/cat_acrobat.ico',
+    scaledSize: {
+      width: 60,
+      height: 60
+    }
+  };
+
 
 }
