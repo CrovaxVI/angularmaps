@@ -5,25 +5,36 @@
   <agm-marker [latitude]="lat" [longitude]="lng">
 
   </agm-marker>
-  <agm-marker [latitude]="lati" [longitude]="lngi">
+  <agm-marker [latitude]="lati" [longitude]="lngi"></agm-marker>
 
-  </agm-marker>
+  <agm-marker [latitude]="lat" [longitude]="lng" [iconUrl]="icon"></agm-marker>
+  <agm-marker [latitude]="latT" [longitude]="lngT" [iconUrl]="icon1"></agm-marker>
+  <agm-marker [latitude]="latV" [longitude]="lngV" [iconUrl]="icon2"></agm-marker>
+  <agm-marker [latitude]="latB" [longitude]="lngB" [iconUrl]="icon3"></agm-marker>
+
    <agm-circle [latitude]="lat" [longitude]="lng"
       [radius]="5000"
-      [fillColor]="'red'">
+      [fillColor]="color">
   </agm-circle>
 
    <agm-circle [latitude]="lati" [longitude]="lngi"
       [radius]="5000"
-      [fillColor]="'yellow'">
+      [fillColor]="color">
   </agm-circle>
 
-  <agm-marker [latitude]="lat" [longitude]="lng" [iconUrl]="icon">
-  </agm-marker>
+  <agm-polygon [paths]="triangle" [fillColor]="colorR">
+</agm-polygon>
+
+<agm-polygon [paths]="rettangolo" [fillColor]="colorR">
+</agm-polygon>
+
 
 </agm-map>
 
-<button onClick()>giallo</button>
-<button onClick()>blue</button>
-<button onClick()>red</button>
+<button (click)="onClickRed()">rosso cerchio</button>
+<button (click)="onClickBlu()">Blu cerchio</button>
+<button (click)="onClickVerde()">verde cerchio</button>
 
+<button (click)="onClickRectGiallo()">giallo rettangolo</button>
+<button (click)="onClickRectBlu()">blu rettangolo</button>
+<button (click)="onClickRectRosa()">rosa rettangolo</button>
